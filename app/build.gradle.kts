@@ -2,8 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.hilt.android)
-    kotlin("kapt")
 }
 
 android {
@@ -18,10 +16,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    kotlin {
-        jvmToolchain(11)
     }
 
     buildTypes {
@@ -62,23 +56,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    // Hilt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
-    implementation(libs.hilt.navigation.compose)
-
-    // ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-
-    // Navegação (atualize se necessário)
-    implementation(libs.androidx.navigation.compose)
-
-    // Material Icons (se quiser usar)
-    implementation("androidx.compose.material:material-icons-extended")
-
-}
-
-kapt {
-    correctErrorTypes = true
 }
