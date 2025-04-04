@@ -19,18 +19,18 @@ val Typography = Typography().run {
         displaySmall = displaySmall.copy(fontFamily = fontFamily()),
         displayMedium = displayMedium.copy(fontFamily = fontFamily()),
         displayLarge = displayLarge.copy(fontFamily = fontFamily()),
-        headlineSmall = displayLarge.copy(fontFamily = fontFamily()),
-        headlineMedium = displayLarge.copy(fontFamily = fontFamily()),
-        headlineLarge = displayLarge.copy(fontFamily = fontFamily()),
-        titleSmall = displayLarge.copy(fontFamily = fontFamily()),
-        titleMedium = displayLarge.copy(fontFamily = fontFamily()),
-        titleLarge = displayLarge.copy(fontFamily = fontFamily()),
-        bodySmall = displayLarge.copy(fontFamily = fontFamily()),
-        bodyMedium = displayLarge.copy(fontFamily = fontFamily()),
-        bodyLarge = displayLarge.copy(fontFamily = fontFamily()),
-        labelSmall = displayLarge.copy(fontFamily = fontFamily()),
-        labelMedium = displayLarge.copy(fontFamily = fontFamily()),
-        labelLarge = displayLarge.copy(fontFamily = fontFamily())
+        headlineSmall = headlineSmall.copy(fontFamily = fontFamily()),
+        headlineMedium = headlineMedium.copy(fontFamily = fontFamily()),
+        headlineLarge = headlineLarge.copy(fontFamily = fontFamily()),
+        titleSmall = titleSmall.copy(fontFamily = fontFamily()),
+        titleMedium = titleMedium.copy(fontFamily = fontFamily()),
+        titleLarge = titleLarge.copy(fontFamily = fontFamily()),
+        bodySmall = bodySmall.copy(fontFamily = fontFamily()),
+        bodyMedium = bodyMedium.copy(fontFamily = fontFamily()),
+        bodyLarge = bodyLarge.copy(fontFamily = fontFamily()),
+        labelSmall = labelSmall.copy(fontFamily = fontFamily()),
+        labelMedium = labelMedium.copy(fontFamily = fontFamily()),
+        labelLarge = labelLarge.copy(fontFamily = fontFamily())
     )
 }
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LynxApp</string>
+    <string name="students">Alunos</string>
+    <string name="subjects">Disciplinas</string>
 </resources>

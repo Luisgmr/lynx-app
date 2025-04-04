@@ -1,4 +1,6 @@
 package com.luisgmr.lynxapp.data.model
 
-class Subject {
+class Subject(
+    name: String
+) {
 }
