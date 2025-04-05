@@ -3,4 +3,5 @@
     <string name="students">Alunos</string>
     <string name="subjects">Disciplinas</string>
     <string name="backStack">"Voltar para a tela anterior"</string>
+    <string name="icon">Ícone</string>
 </resources>
