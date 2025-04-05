@@ -57,4 +57,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Core do Android-Iconics
+    // Suporte para Compose
+    // Phosphor Icons
+    implementation("com.adamglin:phosphor-icon:1.0.0")
 }
