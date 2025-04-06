@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id ("kotlin-kapt")
+    id ("dagger.hilt.android.plugin")
 }
 
 android {
@@ -58,8 +60,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Core do Android-Iconics
-    // Suporte para Compose
-    // Phosphor Icons
-    implementation("com.adamglin:phosphor-icon:1.0.0")
+    // Hilt
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.phosphor.icon)
 }

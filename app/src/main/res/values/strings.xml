@@ -4,4 +4,33 @@
     <string name="subjects">Disciplinas</string>
     <string name="backStack">"Voltar para a tela anterior"</string>
     <string name="icon">Ícone</string>
+    <string name="new_student">Cadastrando um aluno</string>
+    <string name="edit_student">Editando um aluno</string>
+    <string name="new_subject">Cadastrando uma disciplina</string>
+    <string name="edit_subject">Editando uma disciplina</string>
+    <string name="all_students">Alunos cadastrados</string>
+    <string name="no_students">Nenhum aluno cadastrado</string>
+    <string name="no_subjects">Nenhuma disciplina cadastrada</string>
+    <string name="all_subjects">Disciplinas cadastradas</string>
+    <string name="welcome">Bem-vindo(a), ao Lynx!</string>
+    <string name="select_option">Selecione uma opção</string>
+    <plurals name="student_subject_count">
+        <item quantity="one">Matriculado em %d disciplina</item>
+        <item quantity="other">Matriculado em %d disciplinas</item>
+    </plurals>
+
+<!--    Form -->
+    <string name="subject_name_input_hint">Nome da disciplina</string>
+    <string name="student_name_input_hint">Nome do aluno</string>
+    <string name="student_button_new">Cadastrar aluno</string>
+    <string name="student_button_edit">Atualizar aluno</string>
+    <string name="subject_button_new">Cadastrar disciplina</string>
+    <string name="subject_button_edit">Atualizar disciplina</string>
+    <string name="select_subjects">Selecione as disciplinas</string>
+    <string name="positive_option">Sim</string>
+    <string name="negative_option">Não</string>
+    <string name="delete_subject">Excluir disciplina</string>
+    <string name="confirm_delete_subject">Tem certeza que deseja excluir esta disciplina?</string>
+    <string name="delete_student">Excluir aluno</string>
+    <string name="confirm_delete_student">Tem certeza que deseja excluir este aluno?</string>
 </resources>

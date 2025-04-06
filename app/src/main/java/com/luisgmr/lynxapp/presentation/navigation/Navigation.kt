@@ -11,6 +11,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.luisgmr.lynxapp.presentation.ui.menu.MenuScreen
 import com.luisgmr.lynxapp.presentation.ui.students.StudentsScreen
+import com.luisgmr.lynxapp.presentation.ui.students.StudentsFormScreen
+import com.luisgmr.lynxapp.presentation.ui.subjects.SubjectsScreen
+import com.luisgmr.lynxapp.presentation.ui.subjects.SubjectsFormScreen
 
 @Composable
 fun AppNavigation() {
@@ -22,18 +25,16 @@ fun AppNavigation() {
     ) {
         composable(Screen.Menu) { MenuScreen(navController) }
         composable(Screen.Students) { StudentsScreen(navController) }
+        composable(Screen.Subjects) { SubjectsScreen(navController) }
 
-        // Subjects
-//        composable(Screen.Subjects) { SubjectsScreen(navController) }
+        composable(Screen.StudentEdit) {
+            // Aqui o "id" vem do padrão "student_edit?id={id}"
+            StudentsFormScreen(navController)
+        }
 
-//        // Student Form
-//        composable(Screen.StudentEdit) { backStackEntry ->
-//            val id = backStackEntry.arguments?.getString("id") ?: "new"
-//            StudentEditScreen(
-//                id = id,
-//                navController = navController
-//            )
-//        }
+        composable(Screen.SubjectEdit) {
+            SubjectsFormScreen(navController)
+        }
     }
 }
 

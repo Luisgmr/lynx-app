@@ -23,7 +23,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
@@ -33,11 +32,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.adamglin.PhosphorIcons
-import com.adamglin.phosphoricons.Bold
 import com.adamglin.phosphoricons.Fill
 import com.adamglin.phosphoricons.Regular
-import com.adamglin.phosphoricons.bold.Cat
-import com.adamglin.phosphoricons.fill.Cat
 import com.adamglin.phosphoricons.fill.Exam
 import com.adamglin.phosphoricons.fill.Student
 import com.adamglin.phosphoricons.regular.Cat
@@ -73,7 +69,7 @@ fun MenuScreen(
                 }
                 Spacer(Modifier.size(16.dp))
                 Text(
-                    text = "Bem-vindo(a), Luis!",
+                    text = stringResource(R.string.welcome),
                     style = MaterialTheme.typography.bodyLarge,
                     color = Color.White
                 )
@@ -97,7 +93,11 @@ fun MenuScreen(
                 ) {
 
                 }
-                Text("Selecione uma opção", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                Text(
+                    stringResource(R.string.select_option),
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(24.dp)
@@ -105,12 +105,14 @@ fun MenuScreen(
                     ScreenNavigationButton(
                         stringResource(R.string.students),
                         PhosphorIcons.Fill.Student,
-                        navController
+                        navController,
+                        Screen.Students
                     )
                     ScreenNavigationButton(
                         stringResource(R.string.subjects),
                         PhosphorIcons.Fill.Exam,
-                        navController
+                        navController,
+                        Screen.Subjects
                     )
                 }
             }
@@ -122,7 +124,8 @@ fun MenuScreen(
 fun ScreenNavigationButton(
     text: String,
     icon: ImageVector,
-    navController: NavController
+    navController: NavController,
+    route: Screen
 ) {
     Column(
         modifier = Modifier
@@ -135,7 +138,7 @@ fun ScreenNavigationButton(
                     bounded = true,
                 ),
                 onClick = {
-                    navController.navigate(Screen.Students.route)
+                    navController.navigate(route.route)
                 }
             ),
         verticalArrangement = Arrangement.Center,
