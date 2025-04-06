@@ -31,7 +31,7 @@ fun SubjectsFormScreen(
     ) {
         val subtitle =
             if (viewModel.isEditMode)
-                stringResource(R.string.edit_student)
+                stringResource(R.string.edit_subject)
             else
                 stringResource(R.string.new_subject)
         Text(
