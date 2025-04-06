@@ -83,7 +83,7 @@ fun MenuScreen(
                     .weight(1f)
                     .fillMaxWidth()
                     .background(
-                        Color(0xffeaeaea),
+                        MaterialTheme.colorScheme.background,
                         shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp)
                     )
                     .padding(24.dp),
@@ -97,7 +97,7 @@ fun MenuScreen(
                 ) {
 
                 }
-                Text("Selecione uma opção", fontWeight = FontWeight.Bold)
+                Text("Selecione uma opção", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(24.dp)

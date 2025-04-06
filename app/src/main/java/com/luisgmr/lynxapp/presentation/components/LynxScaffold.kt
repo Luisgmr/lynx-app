@@ -24,38 +24,46 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.adamglin.PhosphorIcons
+import com.adamglin.phosphoricons.Bold
+import com.adamglin.phosphoricons.Fill
+import com.adamglin.phosphoricons.bold.CaretLeft
 import com.luisgmr.lynxapp.R
 
 @Composable
 fun LynxScaffold(
     title: String,
     navController: NavController,
-    content: @Composable (ColumnScope) -> Unit
+    floatingButton: @Composable () -> Unit = { },
+    content: @Composable (ColumnScope) -> Unit,
 ) {
     Scaffold(
         topBar = {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(0xff36246c))
-                    .padding(6.dp),
+                    .background(MaterialTheme.colorScheme.primary)
+                    .padding(horizontal = 6.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(
                     onClick = { navController.popBackStack() }
                 ) {
-                    Icon(Icons.Filled.ArrowBack, stringResource(R.string.backStack), tint = Color.White)
+                    Icon(PhosphorIcons.Bold.CaretLeft, stringResource(R.string.backStack), tint = MaterialTheme.colorScheme.onPrimary)
                 }
                 Text(
                     text = title,
-                    color = Color.White,
-                    style = MaterialTheme.typography.titleMedium
+                    color = MaterialTheme.colorScheme.onPrimary,
+                    style = MaterialTheme.typography.titleLarge
                 )
             }
         },
+        floatingActionButton = floatingButton
     ) { innerPadding ->
         Column(
-            modifier = Modifier.padding(innerPadding).fillMaxSize(),
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize(),
             content = content
         )
     }
